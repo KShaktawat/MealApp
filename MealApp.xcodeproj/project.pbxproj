@@ -8,12 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		331293CF2A25222700F4FDCF /* MealAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293CE2A25222700F4FDCF /* MealAppApp.swift */; };
-		331293D12A25222700F4FDCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293D02A25222700F4FDCF /* ContentView.swift */; };
 		331293D32A25222800F4FDCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331293D22A25222800F4FDCF /* Assets.xcassets */; };
 		331293D62A25222800F4FDCF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331293D52A25222800F4FDCF /* Preview Assets.xcassets */; };
 		331293E02A25222800F4FDCF /* MealAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293DF2A25222800F4FDCF /* MealAppTests.swift */; };
 		331293EA2A25222800F4FDCF /* MealAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293E92A25222800F4FDCF /* MealAppUITests.swift */; };
 		331293EC2A25222800F4FDCF /* MealAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293EB2A25222800F4FDCF /* MealAppUITestsLaunchTests.swift */; };
+		331293FC2A2522D600F4FDCF /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293FB2A2522D600F4FDCF /* NetworkService.swift */; };
+		331293FE2A25232B00F4FDCF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293FD2A25232B00F4FDCF /* Constants.swift */; };
+		331294002A25233400F4FDCF /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331293FF2A25233300F4FDCF /* NetworkError.swift */; };
+		331294022A25233D00F4FDCF /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331294012A25233C00F4FDCF /* ViewState.swift */; };
+		3312940C2A25250900F4FDCF /* Meals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312940B2A25250900F4FDCF /* Meals.swift */; };
+		3312940E2A25256800F4FDCF /* SearchMealsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312940D2A25256800F4FDCF /* SearchMealsView.swift */; };
+		331294102A2525C900F4FDCF /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312940F2A2525C900F4FDCF /* ErrorView.swift */; };
+		331294122A25267D00F4FDCF /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331294112A25267D00F4FDCF /* SearchViewModel.swift */; };
+		331294142A2533E000F4FDCF /* MealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331294132A2533E000F4FDCF /* MealView.swift */; };
+		331294162A25393300F4FDCF /* MealDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331294152A25393300F4FDCF /* MealDetailsView.swift */; };
+		3312941C2A257E8E00F4FDCF /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312941B2A257E8E00F4FDCF /* ImageCache.swift */; };
+		331294202A25A0E900F4FDCF /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3312941F2A25A0E900F4FDCF /* DetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +47,6 @@
 /* Begin PBXFileReference section */
 		331293CB2A25222700F4FDCF /* MealApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		331293CE2A25222700F4FDCF /* MealAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppApp.swift; sourceTree = "<group>"; };
-		331293D02A25222700F4FDCF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		331293D22A25222800F4FDCF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		331293D52A25222800F4FDCF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		331293DB2A25222800F4FDCF /* MealAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +54,19 @@
 		331293E52A25222800F4FDCF /* MealAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MealAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		331293E92A25222800F4FDCF /* MealAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITests.swift; sourceTree = "<group>"; };
 		331293EB2A25222800F4FDCF /* MealAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		331293FB2A2522D600F4FDCF /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		331293FD2A25232B00F4FDCF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		331293FF2A25233300F4FDCF /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		331294012A25233C00F4FDCF /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		3312940B2A25250900F4FDCF /* Meals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meals.swift; sourceTree = "<group>"; };
+		3312940D2A25256800F4FDCF /* SearchMealsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchMealsView.swift; sourceTree = "<group>"; };
+		3312940F2A2525C900F4FDCF /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		331294112A25267D00F4FDCF /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		331294132A2533E000F4FDCF /* MealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealView.swift; sourceTree = "<group>"; };
+		331294152A25393300F4FDCF /* MealDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealDetailsView.swift; sourceTree = "<group>"; };
+		3312941B2A257E8E00F4FDCF /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		3312941F2A25A0E900F4FDCF /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
+		331294232A26436500F4FDCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,10 +117,13 @@
 		331293CD2A25222700F4FDCF /* MealApp */ = {
 			isa = PBXGroup;
 			children = (
+				331293FA2A25228600F4FDCF /* Utilities */,
+				331293F92A25227A00F4FDCF /* Screens */,
+				331293F82A25227200F4FDCF /* Service */,
 				331293CE2A25222700F4FDCF /* MealAppApp.swift */,
-				331293D02A25222700F4FDCF /* ContentView.swift */,
 				331293D22A25222800F4FDCF /* Assets.xcassets */,
 				331293D42A25222800F4FDCF /* Preview Content */,
+				331294232A26436500F4FDCF /* Info.plist */,
 			);
 			path = MealApp;
 			sourceTree = "<group>";
@@ -125,6 +151,103 @@
 				331293EB2A25222800F4FDCF /* MealAppUITestsLaunchTests.swift */,
 			);
 			path = MealAppUITests;
+			sourceTree = "<group>";
+		};
+		331293F82A25227200F4FDCF /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				331293FB2A2522D600F4FDCF /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		331293F92A25227A00F4FDCF /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				331294032A2523A100F4FDCF /* SearchMeal */,
+				331294042A2523A600F4FDCF /* MealDetails */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		331293FA2A25228600F4FDCF /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				331293FD2A25232B00F4FDCF /* Constants.swift */,
+				331293FF2A25233300F4FDCF /* NetworkError.swift */,
+				331294012A25233C00F4FDCF /* ViewState.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		331294032A2523A100F4FDCF /* SearchMeal */ = {
+			isa = PBXGroup;
+			children = (
+				331294052A2523C900F4FDCF /* Model */,
+				331294062A2523CF00F4FDCF /* View */,
+				331294072A2523D500F4FDCF /* ViewModel */,
+			);
+			path = SearchMeal;
+			sourceTree = "<group>";
+		};
+		331294042A2523A600F4FDCF /* MealDetails */ = {
+			isa = PBXGroup;
+			children = (
+				331294082A2523F400F4FDCF /* Model */,
+				331294092A2523F900F4FDCF /* View */,
+				3312940A2A2523FD00F4FDCF /* ViewModel */,
+			);
+			path = MealDetails;
+			sourceTree = "<group>";
+		};
+		331294052A2523C900F4FDCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3312940B2A25250900F4FDCF /* Meals.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331294062A2523CF00F4FDCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3312940D2A25256800F4FDCF /* SearchMealsView.swift */,
+				3312940F2A2525C900F4FDCF /* ErrorView.swift */,
+				331294132A2533E000F4FDCF /* MealView.swift */,
+				3312941B2A257E8E00F4FDCF /* ImageCache.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		331294072A2523D500F4FDCF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				331294112A25267D00F4FDCF /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		331294082A2523F400F4FDCF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		331294092A2523F900F4FDCF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				331294152A25393300F4FDCF /* MealDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3312940A2A2523FD00F4FDCF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3312941F2A25A0E900F4FDCF /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +380,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				331293D12A25222700F4FDCF /* ContentView.swift in Sources */,
+				3312941C2A257E8E00F4FDCF /* ImageCache.swift in Sources */,
+				331293FC2A2522D600F4FDCF /* NetworkService.swift in Sources */,
+				3312940C2A25250900F4FDCF /* Meals.swift in Sources */,
+				3312940E2A25256800F4FDCF /* SearchMealsView.swift in Sources */,
+				331294022A25233D00F4FDCF /* ViewState.swift in Sources */,
+				331294162A25393300F4FDCF /* MealDetailsView.swift in Sources */,
 				331293CF2A25222700F4FDCF /* MealAppApp.swift in Sources */,
+				331294122A25267D00F4FDCF /* SearchViewModel.swift in Sources */,
+				331294142A2533E000F4FDCF /* MealView.swift in Sources */,
+				331293FE2A25232B00F4FDCF /* Constants.swift in Sources */,
+				331294202A25A0E900F4FDCF /* DetailsViewModel.swift in Sources */,
+				331294102A2525C900F4FDCF /* ErrorView.swift in Sources */,
+				331294002A25233400F4FDCF /* NetworkError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,11 +554,13 @@
 				DEVELOPMENT_TEAM = 6KR5Z3QHHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,11 +585,13 @@
 				DEVELOPMENT_TEAM = 6KR5Z3QHHD;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealApp/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.food-and-drink";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

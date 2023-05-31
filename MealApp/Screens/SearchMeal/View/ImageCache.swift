@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/**
+  Image Cache
+
+  A singleton class for caching and loading images from URLs.
+
+  ## Usage
+
+  To use the `ImageCache`, access the shared instance by calling `ImageCache.shared`.
+ */
 class ImageCache {
     
     static let shared = ImageCache()

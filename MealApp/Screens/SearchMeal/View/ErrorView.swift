@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - ErrorView for error handling
 struct ErrorView: View {
 
     let message: String

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - MealDetailsView for showing meal details like name, instructions, ingredients
 struct MealDetailsView: View {
     var item: Meal
     @Environment(\.presentationMode) var presentation
@@ -17,7 +18,7 @@ struct MealDetailsView: View {
             VStack {
                 ZStack {
                     AsyncImage(
-                        url: URL(string: item.strMealThumb ?? Constants.defaultValue),
+                        url: URL(string: item.strMealThumb ?? Constants.emptyString),
                         content: { image in
                             image.resizable()
                                 .aspectRatio(contentMode: .fill)

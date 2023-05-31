@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// MARK: - NetworkServiceProtocol
 protocol NetworkServiceProtocol {
     func request<T: Decodable>(url: URL?, decodeType: T.Type) -> Future<T, Error>
 }
@@ -15,7 +16,15 @@ protocol NetworkServiceProtocol {
 final class NetworkService: NetworkServiceProtocol {
 
     private var cancellables = Set<AnyCancellable>()
+    /**
+      Perform an HTTPS request and decode the response.
 
+      - Parameters:
+        - url: The URL for the HTTPS request.
+        - decodeType: The type to which the response should be decoded.
+
+      - Returns: A `Future` object representing the asynchronous result of the request, with a success type of `T` and an error type of `Error`.
+     */
     func request<T: Decodable>(url: URL?, decodeType: T.Type) -> Future<T, Error> {
         return Future<T, Error> { [weak self] promise in
             guard let self = self,

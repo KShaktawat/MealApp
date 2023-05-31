@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 
+// MARK: - DetailsViewModel to handle Details API response
 final class DetailsViewModel: ObservableObject {
     
     private let service: NetworkServiceProtocol
@@ -20,6 +21,18 @@ final class DetailsViewModel: ObservableObject {
         self.service = service
     }
     
+    /**
+      Fetches the details of a meal from the API for the specified meal ID.
+
+      - Parameters:
+        - mealId: The ID of the meal for which to fetch the details.
+
+      ## Description
+
+      The `fetchMealDetails` function fetches the details of a meal from the API for the specified meal ID. It updates the view state to indicate the loading state and constructs the URL based on the provided meal ID.
+
+      The function uses the `NetworkServiceProtocol` to make the HTTP request and decode the response into a `Meals` object. It handles success and failure cases using the `sink` operator.
+    */
     func fetchMealDetails(mealId: String) {
         self.viewState = .loading
         let urlString = "\(Constants.baseURl)/lookup.php?i=\(mealId)"

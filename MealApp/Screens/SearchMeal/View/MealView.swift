@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - MealView for meals shown in dessert category
 struct MealView: View {
     var item: Meal
     
@@ -25,7 +26,7 @@ struct MealView: View {
             
             ZStack(alignment: .topTrailing) {
                 AsyncImage(
-                    url: URL(string: item.strMealThumb ?? Constants.defaultValue),
+                    url: URL(string: item.strMealThumb ?? Constants.emptyString),
                     content: { image in
                         image.resizable()
                             .aspectRatio(contentMode: .fill)
@@ -36,7 +37,7 @@ struct MealView: View {
                 )
                 .frame(width: 100, height: 100)
                 .onAppear {
-                    ImageCache.shared.loadImage(from: URL(string: item.strMealThumb ?? Constants.defaultValue)) { _ in }
+                    ImageCache.shared.loadImage(from: URL(string: item.strMealThumb ?? Constants.emptyString)) { _ in }
                 }
             }
         }

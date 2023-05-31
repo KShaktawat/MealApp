@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ViewState {
+enum ViewState: Equatable {
     case loading
     case error(message: String)
     case dataLoaded

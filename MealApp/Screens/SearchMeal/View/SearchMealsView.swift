@@ -19,15 +19,15 @@ struct SearchMealsView: View {
 
       This computed property returns an array of meals that match the searched text.
 
-      - Returns: An array of `Meal` objects that match the searched text.
+      - Returns: An array of 'Meal' objects that match the searched text.
 
       ## Description
 
-      The `filteredMeals` property filters the `allMeals` array based on the `searchedText` property. It performs a case-insensitive search and returns an array of meals that have a name (strMeal) matching the searched text.
+      The 'filteredMeals' property filters the 'allMeals' array based on the 'searchedText' property. It performs a case-insensitive search and returns an array of meals that have a name (strMeal) matching the searched text.
 
-      If the `searchedText` has a length greater than 1, it performs a regular expression search and returns the matching meals. Otherwise, it returns either the `allMeals` array or a set of placeholder meals depending on the availability of `allMeals`.
+      If the 'searchedText' has a length greater than 1, it performs a regular expression search and returns the matching meals. Otherwise, it returns either the 'allMeals' array or a set of placeholder meals depending on the availability of 'allMeals'.
 
-      - Note: The `searchedText` property should be set prior to accessing this property for accurate results.
+      - Note: The 'searchedText' property should be set prior to accessing this property for accurate results.
      */
     private var filteredMeals: [Meal] {
         let lowercasedSearchText = searchedText.lowercased()
@@ -51,7 +51,7 @@ struct SearchMealsView: View {
 
       The computed property that represents the body of the view.
 
-      - Returns: A `some View` value that represents the content and behavior of the view.
+      - Returns: 'some View' value that represents the content and behavior of the view.
      */
     var body: some View {
         NavigationStack {

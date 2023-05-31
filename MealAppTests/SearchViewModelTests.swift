@@ -34,7 +34,7 @@ class SearchViewModelTests: XCTestCase {
         mockService.mockResponse = Result.success(mockResponse)
         
         // When
-        viewModel.fetchAllMealsWithDessertCategory(query: "dessert")
+        viewModel.fetchAllMealsWithDessertCategory(query: "Dessert")
         
         // Then
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {

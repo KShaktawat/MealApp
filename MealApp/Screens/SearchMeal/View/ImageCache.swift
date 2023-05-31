@@ -14,7 +14,7 @@ import SwiftUI
 
   ## Usage
 
-  To use the `ImageCache`, access the shared instance by calling `ImageCache.shared`.
+  To use the 'ImageCache', access the shared instance by calling 'ImageCache.shared'.
  */
 class ImageCache {
     

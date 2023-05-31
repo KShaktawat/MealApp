@@ -23,7 +23,7 @@ final class NetworkService: NetworkServiceProtocol {
         - url: The URL for the HTTPS request.
         - decodeType: The type to which the response should be decoded.
 
-      - Returns: A `Future` object representing the asynchronous result of the request, with a success type of `T` and an error type of `Error`.
+      - Returns: A 'Future' object representing the asynchronous result of the request, with a success type of 'T' and an error type of 'Error'.
      */
     func request<T: Decodable>(url: URL?, decodeType: T.Type) -> Future<T, Error> {
         return Future<T, Error> { [weak self] promise in

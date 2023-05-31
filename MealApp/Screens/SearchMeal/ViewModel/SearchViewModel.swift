@@ -29,9 +29,9 @@ final class SearchViewModel: ObservableObject {
 
       ## Description
 
-      The `fetchAllMealsWithDessertCategory` function fetches all meals from the API for the specified dessert category. It updates the view state to indicate the loading state and constructs the URL based on the provided query.
+      The 'fetchAllMealsWithDessertCategory' function fetches all meals from the API for the specified dessert category. It updates the view state to indicate the loading state and constructs the URL based on the provided query.
 
-      The function uses the `NetworkServiceProtocol` to make the HTTP request and decode the response into a `Meals` object. It handles success and failure cases using the `sink` operator.
+      The function uses the 'NetworkServiceProtocol' to make the HTTP request and decode the response into a 'Meals' object. It handles success and failure cases using the 'sink' operator.
      */
     func fetchAllMealsWithDessertCategory(query: String) {
         self.viewState = .loading

@@ -29,9 +29,9 @@ final class DetailsViewModel: ObservableObject {
 
       ## Description
 
-      The `fetchMealDetails` function fetches the details of a meal from the API for the specified meal ID. It updates the view state to indicate the loading state and constructs the URL based on the provided meal ID.
+      The 'fetchMealDetails' function fetches the details of a meal from the API for the specified meal ID. It updates the view state to indicate the loading state and constructs the URL based on the provided meal ID.
 
-      The function uses the `NetworkServiceProtocol` to make the HTTP request and decode the response into a `Meals` object. It handles success and failure cases using the `sink` operator.
+      The function uses the 'NetworkServiceProtocol' to make the HTTP request and decode the response into a 'Meals' object. It handles success and failure cases using the 'sink' operator.
     */
     func fetchMealDetails(mealId: String) {
         self.viewState = .loading

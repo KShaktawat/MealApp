@@ -117,11 +117,10 @@
 		331293CD2A25222700F4FDCF /* MealApp */ = {
 			isa = PBXGroup;
 			children = (
-				331293FA2A25228600F4FDCF /* Utilities */,
 				331293F92A25227A00F4FDCF /* Screens */,
 				331293F82A25227200F4FDCF /* Service */,
-				331293CE2A25222700F4FDCF /* MealAppApp.swift */,
-				331293D22A25222800F4FDCF /* Assets.xcassets */,
+				331293FA2A25228600F4FDCF /* Utilities */,
+				33C53D412A27B64C0034CE2B /* Resources */,
 				331293D42A25222800F4FDCF /* Preview Content */,
 				331294232A26436500F4FDCF /* Info.plist */,
 			);
@@ -248,6 +247,15 @@
 				3312941F2A25A0E900F4FDCF /* DetailsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		33C53D412A27B64C0034CE2B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				331293CE2A25222700F4FDCF /* MealAppApp.swift */,
+				331293D22A25222800F4FDCF /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -9,17 +9,17 @@ import Foundation
 import Combine
 
 protocol NetworkServiceProtocol {
-    func request<T: Decodable>(url: String, decodeType: T.Type) -> Future<T, Error>
+    func request<T: Decodable>(url: URL?, decodeType: T.Type) -> Future<T, Error>
 }
 
 final class NetworkService: NetworkServiceProtocol {
 
     private var cancellables = Set<AnyCancellable>()
 
-    func request<T: Decodable>(url: String, decodeType: T.Type) -> Future<T, Error> {
+    func request<T: Decodable>(url: URL?, decodeType: T.Type) -> Future<T, Error> {
         return Future<T, Error> { [weak self] promise in
             guard let self = self,
-                  let url = URL(string: url) else {
+                  let url = url else {
                 return promise(.failure(NetworkError.invalidURL))
             }
             let configuration = URLSessionConfiguration.default

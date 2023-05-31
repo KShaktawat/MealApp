@@ -15,7 +15,7 @@ struct MealView: View {
             VStack(alignment: .leading, spacing: 8) {
                 Text(item.strMeal ?? Constants.defaultValue)
                     .font(.system(size: 19, weight: .bold))
-                    .foregroundColor(Color.black)
+                    .foregroundColor(.pink)
                     .redacted(reason: item.strMeal == nil ? .placeholder : .init())
             }
             .padding(.top)
@@ -35,9 +35,9 @@ struct MealView: View {
                     }
                 )
                 .frame(width: 100, height: 100)
-//                .onAppear {
-//                    ImageCache.shared.loadImage(from: URL(string: item.strMealThumb ?? Constants.defaultValue)) { _ in }
-//                }
+                .onAppear {
+                    ImageCache.shared.loadImage(from: URL(string: item.strMealThumb ?? Constants.defaultValue)) { _ in }
+                }
             }
         }
         .frame(width: UIScreen.main.bounds.width - 30)

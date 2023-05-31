@@ -38,12 +38,13 @@ struct SearchMealsView: View {
                     VStack(spacing: 5) {
                         Text(Constants.heading)
                             .font(.title)
-                            .foregroundColor(.pink)
+                            .fontWeight(.bold)
+                            .foregroundColor(.red)
                         
                         Text(Constants.subHeading)
                             .font(.subheadline)
                             .fontWeight(.medium)
-                            .foregroundColor(.secondary)
+                            .foregroundColor(.gray)
                     }.padding(.bottom)
                     
                     HStack(spacing: 15) {

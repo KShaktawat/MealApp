@@ -22,22 +22,33 @@ final class SearchViewModel: ObservableObject {
 
     func fetchAllMealsWithDessertCategory(query: String) {
         self.viewState = .loading
-        service.request(url:"\(Constants.baseURl)/filter.php?c=\(query)", decodeType: Meals.self)
+        let urlString = "\(Constants.baseURl)/filter.php?c=\(query)"
+        guard let url = URL(string: urlString) else {
+            self.viewState = .error(message: Constants.invalidURL)
+            return
+        }
+        service.request(url: url, decodeType: Meals.self)
             .sink { completion in
                 switch completion {
                 case .failure(let error):
                     if let error = error as? URLError,
                        error.code == .timedOut {
-                        self.viewState = .error(message: Constants.requestTimeout)
+                        DispatchQueue.main.async {
+                            self.viewState = .error(message: Constants.requestTimeout)
+                        }
                     } else {
-                        self.viewState = .error(message: Constants.somethingWentWrong)
+                        DispatchQueue.main.async {
+                            self.viewState = .error(message: Constants.somethingWentWrong)
+                        }
                     }
                 case .finished:
                     print("Finished")
                 }
             } receiveValue: { [weak self] responseData in
-                self?.allMeals = responseData.meals
-                self?.viewState = .dataLoaded
+                DispatchQueue.main.async {
+                    self?.allMeals = responseData.meals
+                    self?.viewState = .dataLoaded
+                }
             }
             .store(in: &cancellables)
     }
